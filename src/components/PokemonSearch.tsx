@@ -1,7 +1,7 @@
 "use client";
 import { Pokemon } from "@/app/types/pokeTypes";
-import PokemonBox from "@/app/components/PokemonBox";
-import SearchBar from "@/app/components/SearchBar";
+import PokemonBox from "@/components/PokemonBox";
+import SearchBar from "@/components/SearchBar";
 import React, { useEffect, useState } from "react";
 
 interface PokemonSearchProps {
