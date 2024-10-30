@@ -1,6 +1,10 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "App PokéAPI",
@@ -14,10 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className=""
-      >
+      <body className={urbanist.className}>
+        <Header></Header>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
