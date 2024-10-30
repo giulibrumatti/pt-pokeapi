@@ -115,4 +115,4 @@ Algunas ideas para mejorar la aplicación incluyen:
 
 La aplicación está desplegada en Vercel y puede ser visualizada en el siguiente enlace:
 
-[Link para el deploy: Firmaway-Challenge](https://vercel.com/)
+[Link deploy: Firmaway-Challenge](https://pt-pokeapi.vercel.app/)
