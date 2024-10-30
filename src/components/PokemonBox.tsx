@@ -2,14 +2,22 @@
 import { Pokemon } from "@/app/types/pokeTypes";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
 
 interface PokemonCardProps {
   pokemon: Pokemon;
 }
 
 const PokemonBox: React.FC<PokemonCardProps> = ({ pokemon }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="p-4 border border-teal-50 rounded-xl">
+    <div
+      className={`p-4 border border-teal-50 rounded-xl transition-transform duration-300 ${
+        isHovered ? "transform translate-y-[-5px]" : ""
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <h3 className="mb-4 text-2xl font-bold text-center uppercase text-orange-400">
         {pokemon.name}
       </h3>
@@ -17,9 +25,9 @@ const PokemonBox: React.FC<PokemonCardProps> = ({ pokemon }) => {
         <Image
           src={pokemon.image}
           alt={pokemon.name}
-          width={100}
-          height={100}
-          className="w-full md:w-[150px] h-auto"
+          width={300}
+          height={300}
+          className="w-full md:w-[300px] h-auto"
         ></Image>
       </div>
 
