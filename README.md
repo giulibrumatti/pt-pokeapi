@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CHALLENGE POKEAPI
 
-## Getting Started
+## Índice
 
-First, run the development server:
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Características Principales](#características-principales)
+- [Deploy](#deploy)
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Ejecución de la Aplicación](#ejecución-de-la-aplicación)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Integración con la API](#integración-con-la-api)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Mejoras Futuras](#mejoras-futuras)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Descripción del Proyecto
+
+Esta aplicación es un desafío que consume la PokéAPI para mostrar una lista de 50 Pokémon. Permite buscar Pokémon por nombre y ver sus detalles, todo en una interfaz responsiva diseñada para ofrecer una experiencia de usuario óptima en dispositivos de diferentes tamaños.
+
+## Características Principales
+
+- Despliega una lista inicial de 50 Pokémon
+- Incluye una barra de búsqueda para encontrar Pokémon por nombre
+- Visualiza información detallada de cada Pokémon, como habilidades y tipos
+- Diseño adaptativo y responsivo
+
+## Requisitos
+
+Asegúrate de contar con las siguientes herramientas instaladas antes de comenzar:
+
+- **Node.js** (versión 14.0.0 o superior)
+- **npm** (versión 6.0.0 o superior)
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com/giulibrumatti/pt-pokeapi.git
+
+2. Accede al directorio del proyecto e instala las dependencias:
+    ```bash
+    cd pt-pokeapi
+    npm install 
+
+## Ejecución de la Aplicación
+
+1. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+
+1. Abre el navegador y visita http://localhost:3000 para ver la aplicación en funcionamiento.
+
+
+## Estructura del Proyecto
+
+```
+pt-pokeapi/  
+├── public/
+│    └── /favigon.png
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── pokeService.tsx
+│   │   │
+│   │   ├── pokemons/  
+│   │   │   └── [id]/
+│   │   │        └── page.tsx
+│   │   ├── types/
+│   │   │   └── pokeTypes.ts
+│   │   │ 
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── not-found.tsx
+│   │   
+│   └── components/
+│       └── Conteiner.tsx
+│       └── Footer.tsx
+│       └── Header.tsx
+│       └── PokemonBox.tsx
+│       └── PokemonSearch.tsx
+│       └── SearchBar.tsx
+├── .gitignore
+├── next.config.js
+├── package.json
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Integración con la API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Esta aplicación utiliza la [PokéAPI](https://pokeapi.co/) para obtener información sobre los Pokémon. Se implementaron las siguientes funciones:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Obtener lista de Pokémon**: muestra una lista inicial de Pokémon.
+- **Obtener detalles de Pokémon**: consulta información específica de cada Pokémon, incluyendo habilidades y tipos.
 
-## Learn More
+## Tecnologías Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js**: para el desarrollo de la aplicación.
+- **React**: biblioteca principal de interfaz de usuario.
+- **TypeScript**: para tipado seguro en el código.
+- **Tailwind CSS**: para estilos responsivos y diseño adaptativo.
+- **PokéAPI**: como fuente de datos para los Pokémon.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Mejoras Futuras
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Algunas ideas para mejorar la aplicación incluyen:
 
-## Deploy on Vercel
+- **Filtrado Avanzado**: permitir al usuario filtrar Pokémon por tipo o habilidades.
+- **Favoritos**: opción para que los usuarios marquen Pokémon como favoritos.
+- **Cargar Más Pokémon**: agregar la funcionalidad de carga dinámica para ver más Pokémon.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La aplicación está desplegada en Vercel y puede ser visualizada en el siguiente enlace:
+
+[Link para el deploy: Firmaway-Challenge](https://vercel.com/)

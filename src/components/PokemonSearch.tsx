@@ -25,8 +25,10 @@ const PokemonSearch: React.FC<PokemonSearchProps> = ({ pokemons }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center h-full">
-      <SearchBar onSearch={handleSearch} />
+    <div className="h-full">
+      <div className="flex justify-center">
+        <SearchBar onSearch={handleSearch} />
+      </div>
       <div className="relative z-10 grid sm:grid-cols-2 max-w-5xl gap-6 max-auto mt-4 md:grid-cols-4">
         {filteredPokemons.length > 0 ? (
           filteredPokemons.map((pokemon) => (
